@@ -103,7 +103,6 @@ class STC3100:
                                                                     #
         if current >= 0x2000:                                       # Cf. https://github.com/st-sw/STC3100_GenericDriver
             current -= 0x4000                                       #
-            current *= -1                                           #
                                                                     #
         current = (current * (CURRENT_SCALE/self.shunt_res)) / 4096 #
 
@@ -143,7 +142,6 @@ class STC3100:
                                                                     #
         if current >= 0x2000:                                       # Cf. https://github.com/st-sw/STC3100_GenericDriver
             current -= 0x4000                                       #
-            current *= -1                                           #
                                                                     #
         current = (current * (CURRENT_SCALE/self.shunt_res)) / 4096 #
 
