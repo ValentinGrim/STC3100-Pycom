@@ -74,6 +74,9 @@ class STC3100:
     def reset(self):
         self.i2c.writeto_mem(self.address,REG_CTRL,2) #Reset...
 
+    def calibration(self):
+        self.i2c.writeto_mem(self.address,REG_MODE,24+self.resolution)
+
     def read_charge(self):
         charge = ubinascii.hexlify(self.i2c.readfrom_mem(self.address,REG_CHARGE_LOW,2)).decode('ascii') #Read
         charge = charge[2:] + charge [:2] #Invert
@@ -126,7 +129,6 @@ class STC3100:
 
     def read_all(self):
         data = ubinascii.hexlify(self.i2c.readfrom_mem(self.address,REG_CHARGE_LOW,10)).decode('ascii')
-        print(data)
         charge = data[2:4] + data[:2]
         current = data[10:12] + data[8:10]
         voltage = data[14:16] + data[12:14]
