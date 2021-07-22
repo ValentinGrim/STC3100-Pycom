@@ -56,7 +56,7 @@ class STC3100:
 
         self.shunt_res = shunt_res
 
-        data = 24 + self.resolution #send to REG_MODE 11xx0 start + calibration
+        data = 16 + self.resolution #send to REG_MODE 11xx0 start + calibration
 
         self.i2c.writeto_mem(self.address,REG_MODE,data) #Calibration
 
