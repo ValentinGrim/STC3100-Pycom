@@ -1,5 +1,5 @@
 #  This is an exemple main file juste printing all values from the STC3100
-#  Created by Valentin MONNOT
+#  Author: Valentin MONNOT <vmonnot@outlook.com>
 #  12/07/2021
 #  MIT-License
 
