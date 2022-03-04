@@ -1,5 +1,6 @@
 #  Here you can find a lib for STC3100 working on Pycom, tested on Lopy4 OEM on custom board
-#  Created by Valentin MONNOT based on https://github.com/st-sw/STC3100_GenericDriver
+#  based on https://github.com/st-sw/STC3100_GenericDriver
+#  Author : Valentin MONNOT <vmonnot@outlook.com>
 #  12/07/2021
 #  MIT-License
 
